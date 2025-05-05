@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0a192f;
+      color: #ccd6f6;
+      text-align: center;
+      perspective: 1000px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background-color: #112240;
+      color: #64ffda;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo-icon {
+      margin-right: 0.5rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      color: #64ffda;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #a8dadc;
+      transform: translateY(-5px) scale(1.1);
+    }
+
+    .hero {
+      background-color: #112240;
+      padding: 3rem 2rem;
+      text-align: center;
+      transform: perspective(1500px);
+      transform-style: preserve-3d;
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #64ffda;
+      margin-bottom: 1.5rem;
+      position: relative;
+      top: -30px;
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: rotateY(20deg) scale(1.1);
+    }
+
+    .hero h1 {
+      color: #64ffda;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+      color: #8892b0;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #a8b2d1;
+    }
+
+    .section-box {
+      background-color: #1c2b4a;
+      border: 2px solid #64ffda;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transform-style: preserve-3d;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .section-box:hover {
+      transform: rotateY(10deg) scale(1.05);
+    }
+
+    section h2 {
+      color: #64ffda;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      text-align: center;
+      color: #a8b2d1;
+    }
+
+    .skills-list {
+      list-style-type: square;
+      display: inline-block;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .skills-list li {
+      color: #ccd6f6;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-list {
+      list-style-type: disc;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 0;
+    }
+
+    .projects-list li {
+      color: #ccd6f6;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      text-align: center;
+    }
+
+    .contact-info a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: #64ffda;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #a8dadc;
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #112240;
+      color: #64ffda;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon">🌟</span> Welcome to My Portfolio!
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <img src="mmyq.jpg" alt="Giorgia Schen Janda" />
+          <h1>Hi There, I'm Giorgia Schen Janda</h1>
+          <h2>I'm a 2nd-Year IT Student</h2>
+          <p>
+            Passionate about technology and coding, I'm eager to explore the world of development and contribute to impactful projects. Here's a snapshot of my journey so far!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section id="about" class="section-box">
+        <h2>About Me</h2>
+        <p>
+          I'm currently pursuing a degree in Information Technology, where I've been learning programming, databases, and web development. I enjoy problem-solving, learning new technologies, and working on practical projects.
+        </p>
+      </section>
+
+      <section id="skills" class="section-box">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Programming Languages: Java, JavaScript, C++</li>
+          <li>Web Development: HTML, CSS, JavaScript</li>
+          <li>Databases: MySQL</li>
+          <li>Version Control: Git & GitHub</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section-box">
+        <h2>Projects</h2>
+        <ul class="projects-list">
+          <li><strong>Budget Tracker</strong>: A web application to track and manage personal finances.</li>
+          <li><strong>Health Matters</strong>: A health management system that helps users track their daily health activities.</li>
+          <li><strong>Color Game</strong>: A fun game where users have to guess the correct color code.</li>
+          <li><strong>Bingo Game</strong>: An interactive bingo game, allowing users to play and win prizes.</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section-box">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me through email or connect with me on social media!</p>
+        <div class="contact-info">
+          <a href="mailto:your.email@example.com">Email</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="https://www.facebook.com/giorgia.schen.comia.janda.2024/" target="_blank">Facebook</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Giorgia Schen Janda. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
